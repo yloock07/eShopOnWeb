@@ -6,7 +6,7 @@ on: [push, workflow_dispatch]
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
   RESOURCE-GROUP: rg-eshoponweb-yloock
-  LOCATION: westus2
+  #LOCATION: westus2
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 25805c48-ab0c-4406-8c05-d53e046593a1
   WEBAPP-NAME: eshoponweb-webapp-loock
@@ -15,7 +15,7 @@ env:
 jobs:
   #Build, test and publish .net web project in repository
   buildandtest:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     #checkout the repository
     - uses: actions/checkout@v4
